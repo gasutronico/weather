@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Show result</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+	
+		<h1>
+			Current Wheater in <span th:text="${cityWeather.cityName}"
+				th:remove="tag"></span>
+		</h1>
+	
+		<p th:text="'City:' + ${cityWeather.cityName}"></p>
+		<p th:text="'Date: ' + ${cityWeather.date}"></p>
+		<p th:text="'Description: ' + ${cityWeather.weatherDescription}"></p>
+		<p th:text="'Temperature: ' + ${cityWeather.temperatureC}+'°C / '+ ${cityWeather.temperatureF}+'°F'"></p>
+		<p th:text="'Sunrise Time: ' + ${cityWeather.sunriseTime}"></p>
+		<p th:text="'Sunset Time: ' + ${cityWeather.sunsetTime}"></p>
+		<a href="/weather">Get other city weather</a>
+	
+	</body>
+</html>
